@@ -13,7 +13,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0" />
-    <PackageReference Include="Microsoft.NET.Build.Containers" Version="7.0.305" />
+    <PackageReference Include="Microsoft.NET.Build.Containers" Version="7.0.307" />
     <PackageReference Include="Microsoft.AspNetCore.HeaderPropagation" Version="7.0.9" />
 
     <PackageReference Include="HotChocolate.AspNetCore" Version="13.6.0-preview.7" />
