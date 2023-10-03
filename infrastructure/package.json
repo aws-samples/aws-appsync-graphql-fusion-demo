@@ -28,7 +28,7 @@
     "constructs": "^10.0.0",
     "esbuild": "^0.19.2",
     "glob": "^10.3.3",
-    "graphql": "^16.8.0",
+    "graphql": "^16.8.1",
     "graphql-yoga": "^4.0.4",
     "source-map-support": "^0.5.21",
     "uuid": "^9.0.0"
