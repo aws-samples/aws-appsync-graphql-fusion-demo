@@ -1,0 +1,10 @@
+*.ts
+!*.d.ts
+*.fgp
+*.fsp
+subgraph-config.json
+
+
+# CDK asset staging directory
+.cdk.staging
+cdk.out

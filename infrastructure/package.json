@@ -1,0 +1,36 @@
+{
+  "name": "appsync-graphql-fusion-demo",
+  "version": "0.1.0",
+  "bin": {
+    "appsync-graphql-fusion-example": "bin/appsync-graphql-fusion-demo.js"
+  },
+  "scripts": {
+    "build": "node build.mjs && tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.4",
+    "@types/node": "20.5.3",
+    "@types/uuid": "^9.0.3",
+    "aws-cdk": "2.93.0",
+    "jest": "^29.6.3",
+    "ts-jest": "^29.1.1",
+    "ts-node": "^10.9.1",
+    "typescript": "~5.1.6"
+  },
+  "dependencies": {
+    "@aws-appsync/utils": "^1.2.6",
+    "@types/aws-lambda": "^8.10.119",
+    "aws-cdk-lib": "2.93.0",
+    "aws-lambda": "^1.0.7",
+    "constructs": "^10.0.0",
+    "esbuild": "^0.19.2",
+    "glob": "^10.3.3",
+    "graphql": "^16.8.0",
+    "graphql-yoga": "^4.0.4",
+    "source-map-support": "^0.5.21",
+    "uuid": "^9.0.0"
+  }
+}

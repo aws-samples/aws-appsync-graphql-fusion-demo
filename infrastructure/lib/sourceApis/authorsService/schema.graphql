@@ -1,0 +1,44 @@
+schema {
+    query: Query,
+    mutation: Mutation
+}
+
+type Author {
+    id: ID!
+    name: String!
+    bio: String
+    contactEmail: String
+    nationality: String
+}
+
+type AuthorConnection {
+   items: [Author]
+   nextToken: String
+}
+
+type Book {
+    authorId: ID!
+    author: Author
+}
+
+input CreateAuthorInput {
+    name: String!
+    bio: String
+    contactEmail: String
+    nationality: String
+}
+
+input DeleteAuthorInput {
+    id: ID!
+}
+
+type Mutation {
+    createAuthor(input: CreateAuthorInput!): Author
+    deleteAuthor(input: DeleteAuthorInput!): Author
+}
+
+type Query {
+    authorById(id: ID!): Author
+    authors(limit: Int): AuthorConnection
+    bookByAuthorId(authorId: ID!): Book
+}

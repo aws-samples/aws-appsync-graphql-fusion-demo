@@ -1,0 +1,13 @@
+*.js
+!jest.config.js
+*.d.ts
+node_modules
+subgraph-config.json
+*.fsp
+*.fgp
+fusion-gateway/Gateway/bin/*
+fusion-gateway/Gateway/obj/*
+
+# CDK asset staging directory
+.cdk.staging
+cdk.out

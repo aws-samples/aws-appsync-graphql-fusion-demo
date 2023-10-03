@@ -1,0 +1,44 @@
+schema {
+    query: Query,
+    mutation: Mutation
+}
+
+type Author {
+    id: ID!
+    books: BookConnection
+}
+
+type Book {
+    id: ID!
+    title: String!
+    authorId: ID!
+    genre: String
+    publicationYear: Int
+}
+
+type BookConnection {
+   items: [Book]
+   nextToken: String 
+}
+
+input CreateBookInput {
+    title: String!
+    authorId: ID!
+    genre: String
+    publicationYear: Int
+}
+
+input DeleteBookInput {
+    id: ID!
+}
+
+type Mutation {
+    createBook(input: CreateBookInput!): Book
+    deleteBook(input: DeleteBookInput!): Book
+}
+
+type Query {
+    bookById(id: ID!): Book
+    books(limit: Int): BookConnection
+    authorById(id: ID!): Author
+}

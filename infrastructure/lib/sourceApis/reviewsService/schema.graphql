@@ -1,0 +1,50 @@
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type Author {
+    id: ID!
+    reviews: ReviewConnection
+}
+
+type Book {
+    id: ID!
+    reviews: ReviewConnection
+}
+
+type Review {
+    id: ID!
+    authorId: String!
+    bookId: String!
+    comment: String!
+    rating: Int!
+}
+
+type ReviewConnection {
+    items: [Review]
+    nextToken: String
+}
+
+input CreateReviewInput {
+    bookId: ID!
+    authorId: ID!
+    comment: String!
+    rating: Int!
+}
+
+input DeleteReviewInput {
+    id: ID!
+}
+
+type Query {
+    reviewById(id: ID!): Review
+    reviews(limit: Int): ReviewConnection
+    authorById(id: ID!): Author
+    bookById(id: ID!): Book
+}
+
+type Mutation {
+    createReview(input: CreateReviewInput!): Review
+    deleteReview(input: DeleteReviewInput!): Review
+}
