@@ -23,7 +23,7 @@
   "dependencies": {
     "@aws-appsync/utils": "^1.2.6",
     "@types/aws-lambda": "^8.10.119",
-    "aws-cdk-lib": "2.93.0",
+    "aws-cdk-lib": "2.177.0",
     "aws-lambda": "^1.0.7",
     "constructs": "^10.0.0",
     "esbuild": "^0.19.2",
